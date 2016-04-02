@@ -1,0 +1,139 @@
+vendor-prefixes = (official webkit)
+/* Variables
+ * Strictly use underscore separated lowercase variable names
+ */
+
+/*
+ *  Colors
+ *  These are defaults from material design palette
+ *  http://www.google.com/design/spec/style/color.html#color-color-palette
+ */
+color_red  = #F44336
+color_pink = #E91E63
+color_purple = #9C27B0
+color_deep_purple = #673AB7
+color_indigo = #3F51B5
+color_blue = #2196F3
+color_light_blue = #03A9F4
+color_cyan = #00BCD4
+color_teal = #009688
+color_green = #4CAF50
+color_light_green = #8BC34A
+color_lime = #CDDC39
+color_yellow = #FFEB3B
+color_amber = #FFC107
+color_orange = #FF9800
+color_deep_orange = #FF5722
+color_brown = #795548
+color_grey = #9E9E9E
+color_blue_grey = #607D8B
+color_metalblack = #3a3a3a
+
+
+
+/* FONTS
+ * Use these variables as font values
+ */
+font_xlight  = 'SourceSansProExtralt'
+font_light   = 'SourceSansProLight'
+font_regular = 'SourceSansProRegular'
+font_semibold= 'SourceSansPro-Semibold'
+font_bold    = 'SourceSansProBold'
+
+font_default_family = 'SourceSansProLight', 'Helvetica Neue', 'Calibri', 'Ubuntu Light', sans-serif;
+
+line_height = font_line_height = 28px
+font_size = 14px
+
+
+/* Z-Index Scale
+ *
+ */
+z0 = 0
+z1 = 100
+z2 = 200
+z3 = 300
+z4 = 400
+z5 = 500
+z6 = 600
+z7 = 700
+z8 = 800
+z9 = 900
+
+
+/* Time scale
+ * Uniform Animations
+ */
+time_1x = 0.1s
+time_2x = time_1x * 2
+time_3x = time_1x * 3
+time_4x = time_1x * 4
+
+
+/* Opacity States
+ * All states should be maintained with opacity
+ */
+opacity_default  = .82
+opacity_disabled = .64
+opacity_hover  = 1
+opacity_active = 1    // Just an alias
+
+
+
+/* Structure Variables
+ */
+gutter_x = 16px
+gutter_y = 24px
+
+
+// Easings
+easing_material = unquote('cubic-bezier(.55,0,.1,1)')
+
+
+
+/* Theme
+ * Will be later moved to themes/default.styl
+ */
+
+
+color_base = color_blue
+color_base_border = darken(color_base, 10%)
+
+
+theme_bg = #fff
+theme_base = #f2f2f2
+theme_border = rgba(#000, 0.16)
+theme_widget = #fff
+theme_veil = rgba(#000, 0.06)
+
+// theme_bg = #1d1d1d
+// theme_base = #323232
+// theme_border = rgba(#000, 0.18)
+// theme_widget = #282828
+// theme_veil = rgba(#000, 0.06)
+
+is_theme_light = (luminosity(theme_base)) > (0.36)
+is_color_light = (luminosity(color_base)) > (0.36)
+
+
+theme_font = is_theme_light ? #888 : #6e6e6e
+color_font = is_color_light ? theme_font : #f2f2f2
+
+
+
+/* Others Settings
+ */
+// Header
+header_height = 64px
+footer_height = 68px
+
+// Sidebar
+sidebar_width = 260px
+sidebar_width_small = 60px
+
+
+// Breakpoints
+width_mobile = 480px
+width_tablet = 720px
+width_desktop= 1280
+width_full = 100vw

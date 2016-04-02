@@ -1,0 +1,6 @@
+{
+  "name": "PermissionAnalyticsPage",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PermissionAnalyticsPage.js"
+}

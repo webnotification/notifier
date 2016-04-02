@@ -1,0 +1,6 @@
+{
+  "name": "CreateGroupsPage",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CreateGroupsPage.js"
+}

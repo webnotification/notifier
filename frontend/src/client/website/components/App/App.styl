@@ -1,0 +1,50 @@
+normalize-css()
+border-box-html()
+fluid-media()
+
+@import 'variables'
+
+body
+  background-color theme_base
+  fill-viewport full
+  margin 0
+  padding 0
+
+  font-family font_default_family
+  font-size font_size
+  line-height font_line_height
+
+
+.browserupgrade
+  margin: 0.2em 0
+  background: #ccc
+  color: #000
+  padding: 0.2em 0
+
+
+#app
+  fill-parent()
+  .app-container
+    fill-parent()
+    flex-container column
+  .app-content
+    flex-container column
+    flex 1
+    padding-top header_height
+
+
+// App Transitions
+
+.fade-enter
+  opacity 0.01
+  transition opacity .5s ease-in
+
+.fade-enter.fade-enter-active
+  opacity 1
+
+.fade-leave
+  opacity 1
+  transition opacity .5s ease-in
+
+.fade-leave.fade-leave-active
+  opacity 0

@@ -1,0 +1,35 @@
+{
+	"folders":
+	[
+		{
+			"folder_exclude_patterns":
+			[
+				"node_modules"
+			],
+			"name": "Notifier",
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"alignment_chars":
+		[
+			" from ",
+			"=",
+			":"
+		],
+		"alignment_space_chars":
+		[
+			" from ",
+			"=",
+			":",
+			" "
+		],
+		"ensure_newline_at_eof_on_save": false,
+		"highlight_line": true,
+		"match_brackets_angle": true,
+		"tab_size": 2,
+		"translate_tabs_to_spaces": true,
+		"trim_trailing_white_space_on_save": true
+	}
+}

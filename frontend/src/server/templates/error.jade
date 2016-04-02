@@ -1,0 +1,18 @@
+extends layout
+
+block styles
+  style(type='text/css').
+    body{
+      margin: 0;
+      padding: 20px;
+      background-color: #ddd;
+      font-family: sans-serif;
+    }
+    h1{ font-size: 2em; }
+    pre{ font-family: monospace; }
+
+
+block content
+  h1 #{message}
+  p
+    pre #{error}

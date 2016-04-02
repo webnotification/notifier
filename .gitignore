@@ -1,0 +1,15 @@
+# frontend
+build
+node_modules
+npm-debug.log
+.DS_Store
+*.swp
+uploads
+git_script.sh
+notif.sublime-workspace
+credentials.json
+
+# backend
+git_script.sh
+*.pyc
+*.swp

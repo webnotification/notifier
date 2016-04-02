@@ -1,0 +1,6 @@
+{
+  "name": "NotificationAnalyticsPage",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./NotificationAnalyticsPage.js"
+}
