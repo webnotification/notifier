@@ -9,8 +9,6 @@ engines:
     enabled: true
   radon:
     enabled: true
-  nodesecurity:
-    enabled: true
   pep8:
     enabled: true
 ratings:
