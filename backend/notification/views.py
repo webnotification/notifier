@@ -228,18 +228,22 @@ def send_notification_response(request):
     response["Access-Control-Allow-Origin"] = "*"
     return response
 
+def get_CTR(event, params):
+    event_id = event + '_id'
+    filter_dict = { event_id: params[event_id] }
+    event_class = event.capitalize() + 'Response'
+    event_CTR = eval(event_class).objects.filter(**filter_dict).values('action').annotate(count=Count('action'))
+    response = {'result': list(event_CTR)}
+    return response
+
 def get_permission_CTR(request):
     params = request.GET
-    permission_id = params['permission_id']
-    permission_CTR = PermissionResponse.objects.filter(permission_id=permission_id).values('action').annotate(count=Count('action'))
-    response = {'result': list(permission_CTR)}
+    response = get_CTR('permission', params)
     return JsonResponse(response)
    
 def get_notification_CTR(request):
     params = request.GET
-    notification_id = params['notification_id']
-    notification_CTR = NotificationResponse.objects.filter(notification_id=notification_id).values('action').annotate(count=Count('action'))
-    response = {'result': list(notification_CTR)}
+    response = get_CTR('notification', params)
     return JsonResponse(response)
 
 def get_permission_analytics(request):
