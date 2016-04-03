@@ -15,7 +15,7 @@ from dateutil import parser
 
 
 def index(request):
-    return HttpResponse("Yup, Server is running.")
+    return HttpResponse("Yup, Server is running!!!")
 
 def create_default_groups(client_id):
     percentages = [100, 50, 25, 10]
