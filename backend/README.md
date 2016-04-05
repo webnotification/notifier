@@ -2,10 +2,12 @@
 
 ## Prerequisites
 [RabbitMQ](https://www.rabbitmq.com/download.html)
+PostgreSQL
 
 ## Install
 
 ```
+createdb notifications
 pip install -r requirements.txt
 python manage.py migrate
 ```
