@@ -127,10 +127,15 @@ def send_notification(request):
     title = params['title']
     message = params['message']
     target_url = params['target_url']
+    notification = Notification(title=title, message=message, target_url=target_url,
+     client_id=client_id, group_id=group_id)
+    notification.save()
+    args = (user_list, title, message, target_url, notification_id)
+    add_to_task(args, notification, client_id, group_id)
+
+def add_to_task(args, notification, client_id, group_id):
     notification_date = params['date']
     notification_time = params['time']
-    notification = Notification(title=title, message=message, target_url=target_url, client_id=client_id, group_id=group_id)
-    notification.save()
     notification_id = notification.id
     user_list = get_notification_user_list(client_id, group_id)
     record_list = [NotificationResponse(user_id=user['id'], notification_id=notification_id) for user in user_list]
@@ -141,7 +146,7 @@ def send_notification(request):
         datetime_object = datetime_object.replace(tzinfo=None) + datetime_object.utcoffset()
     else:
         datetime_object = datetime.now()    
-    push_notification.apply_async(args=(user_list, title, message, target_url, notification_id), eta=datetime_object)
+    push_notification.apply_async(args=args, eta=datetime_object)
     return JsonResponse({'success': True})
 
 def get_notification_data(request):
