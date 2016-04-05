@@ -1,20 +1,20 @@
 # notification.backend
 
-### Before running django app
+## Prerequisites
+[RabbitMQ](https://www.rabbitmq.com/download.html)
 
-##### Run celery
-``` bash
-celery --app=backend.celery:app worker --loglevel=INFO
+## Install
+
+```
+pip install -r requirements.txt
+python manage.py migrate
 ```
 
-##### Run rabbitmq
-``` bash
+
+## Usage
+
+```
 rabbitmq-server
-```
-
-or
-
-##### Run redis
-``` bash
-redis-server
+celery --app=backend.celery:app worker --loglevel=INFO
+python manage.py runserver
 ```
